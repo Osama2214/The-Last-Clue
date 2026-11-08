@@ -24,4 +24,4 @@ Pin package versions in `Directory.Packages.props`. Commit each affected `packag
 
 ## Work tracking
 
-Select an owner and status in `docs/tracking/Taska.xlsx`. `Ready?` is calculated from the dependency IDs. Use `In Review` while the pull request is being checked, and `Done` only after the acceptance checks and review pass. Update the tracker through a pull request; avoid several members editing the binary workbook at once.
+Update owners, statuses and notes in the [online task tracker](https://docs.google.com/spreadsheets/d/14sEpuYsHtw5xIbB4qP7JUSKR0zdDnTnz/edit?gid=875743418#gid=875743418). The local workbook is a saved snapshot. `Ready?` is calculated from dependency IDs. Use `In Progress` while implementation or acceptance checks remain, `In Review` while a completed change is being reviewed, and `Done` after the acceptance checks and review pass. Include the task ID and pull request link in the notes.
