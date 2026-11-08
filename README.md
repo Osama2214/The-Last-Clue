@@ -32,6 +32,16 @@ dotnet run --project src/LastClue.Web --launch-profile http
 
 Open the HTTP address printed by the application. The current foundation does not need a database or AI key. `/health` returns 200. `/health/ready` returns 503 until real storage, configuration and reviewed case coverage are implemented. See the [setup guide](docs/setup.md) for details.
 
+## Run with Docker
+
+With Docker Desktop running, execute from the repository root:
+
+```sh
+docker compose up --build --detach --wait
+```
+
+Open `http://localhost:8080`. See [Docker setup](docs/docker.md) for logs, stopping, port changes and the current health responses.
+
 ## Solution
 
 ```text

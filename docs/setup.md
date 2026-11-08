@@ -8,6 +8,8 @@
 
 The foundation runs without SQL Server or an AI provider. Add those prerequisites when the persistence and provider tasks are implemented; do not treat the scaffold as a finished game.
 
+For container-based local development, use the [Docker setup](docker.md).
+
 ## Build and run
 
 ```sh
