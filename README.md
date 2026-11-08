@@ -4,7 +4,7 @@ The Last Clue is a multiplayer mystery investigation game for 4–8 players, bui
 
 ## Current progress
 
-The repository contains the project documentation, editable diagrams, task tracker and the .NET solution foundation. The web host, typed configuration checks, health endpoints and initial tests run locally. Accounts, persistence, live rooms, case generation and complete gameplay are the next implementation workstreams.
+The repository contains the project documentation, editable diagrams, task tracker and the .NET solution foundation. The web host, configuration checks, JSON API error contract and safe request diagnostics run locally. Accounts, persistence, live rooms, case generation and complete gameplay are the next implementation workstreams.
 
 ## Team
 

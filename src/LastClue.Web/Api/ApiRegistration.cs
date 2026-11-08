@@ -1,3 +1,4 @@
+using LastClue.Web.Diagnostics;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,6 +36,7 @@ internal static class ApiRegistration
         app.UseMiddleware<CorrelationIdMiddleware>();
         app.UseWhen(ApiRequest.IsApi, branch =>
         {
+            branch.UseMiddleware<ApiRequestLoggingMiddleware>();
             branch.UseMiddleware<ApiExceptionMiddleware>();
             branch.UseStatusCodePages(context => ApiErrors.WriteAsync(context.HttpContext, context.HttpContext.Response.StatusCode));
         });

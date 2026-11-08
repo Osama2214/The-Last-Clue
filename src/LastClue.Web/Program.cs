@@ -1,9 +1,11 @@
+using LastClue.Web.Diagnostics;
 using LastClue.Web.Api;
 using LastClue.Web.Configuration;
 using LastClue.Web.Health;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Logging.AddSafeRequestLogging();
 builder.Services.AddProjectConfiguration();
 builder.Services.AddControllersWithViews();
 builder.Services.AddApiFoundation();

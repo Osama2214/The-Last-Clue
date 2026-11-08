@@ -1,6 +1,6 @@
 namespace LastClue.Web.Api;
 
-internal sealed class CorrelationIdMiddleware(RequestDelegate next)
+internal sealed class CorrelationIdMiddleware(RequestDelegate next, ILogger<CorrelationIdMiddleware> logger)
 {
     public async Task InvokeAsync(HttpContext context)
     {
@@ -14,6 +14,9 @@ internal sealed class CorrelationIdMiddleware(RequestDelegate next)
             context.Response.Headers[ApiRequest.CorrelationHeader] = correlationId;
             return Task.CompletedTask;
         });
-        await next(context);
+        using (logger.BeginScope("CorrelationId: {CorrelationId}", correlationId))
+        {
+            await next(context);
+        }
     }
 }
