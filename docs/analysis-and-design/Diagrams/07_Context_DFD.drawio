@@ -1,0 +1,110 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="5e99Du7cELul-Us1dBnR">
+    <mxGraphModel dx="1078" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TlubrP3PXbpemTK9973B-14" edge="1" parent="1" source="TlubrP3PXbpemTK9973B-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;exitX=0.687;exitY=0.994;exitDx=0;exitDy=0;exitPerimeter=0;" target="TlubrP3PXbpemTK9973B-8">
+          <mxGeometry relative="1" x="-0.2126" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="209.5" />
+              <mxPoint x="220" y="275" />
+              <mxPoint x="360" y="275" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-15" connectable="0" parent="TlubrP3PXbpemTK9973B-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;Game input&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1903" y="-1" as="geometry">
+            <mxPoint x="35" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt; Account and game actions&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="200" x="90" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Player&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="150" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-18" edge="1" parent="1" source="TlubrP3PXbpemTK9973B-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="TlubrP3PXbpemTK9973B-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-19" connectable="0" parent="TlubrP3PXbpemTK9973B-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;Admin input&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0103" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt; &lt;/code&gt;Users, cases, settings&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="200" x="590" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Administrator&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="650" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-20" edge="1" parent="1" source="TlubrP3PXbpemTK9973B-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="TlubrP3PXbpemTK9973B-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-21" connectable="0" parent="TlubrP3PXbpemTK9973B-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;Public status / audit&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0899" y="-1" as="geometry">
+            <mxPoint y="-27" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-22" edge="1" parent="1" source="TlubrP3PXbpemTK9973B-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="TlubrP3PXbpemTK9973B-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-23" connectable="0" parent="TlubrP3PXbpemTK9973B-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;Case prompt&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0188" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-26" edge="1" parent="1" source="TlubrP3PXbpemTK9973B-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="TlubrP3PXbpemTK9973B-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-27" connectable="0" parent="TlubrP3PXbpemTK9973B-26" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;Avatar seed&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0818" as="geometry">
+            <mxPoint x="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-28" edge="1" parent="1" source="TlubrP3PXbpemTK9973B-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="TlubrP3PXbpemTK9973B-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-29" connectable="0" parent="TlubrP3PXbpemTK9973B-28" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;Image / failure&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.2397" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;fontSize=13;perimeterSpacing=0;roundedPerimeter=1;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt; &lt;/code&gt;Authorize, load case, run game,&lt;/pre&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; save progress&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="120" width="260" x="295" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;0 The Last Clue&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="385" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-24" edge="1" parent="1" source="TlubrP3PXbpemTK9973B-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="TlubrP3PXbpemTK9973B-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-25" connectable="0" parent="TlubrP3PXbpemTK9973B-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;Case JSON&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1482" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt; &lt;/code&gt;Fictional case generation&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="200" x="90" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;AI provider&lt;br/&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="150" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt; &lt;/code&gt;DiceBear images&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="200" x="590" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Avatar provider&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="40" width="80" x="650" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-16" edge="1" parent="1" source="TlubrP3PXbpemTK9973B-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="TlubrP3PXbpemTK9973B-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TlubrP3PXbpemTK9973B-17" connectable="0" parent="TlubrP3PXbpemTK9973B-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;Scoped state / result&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.2058" y="1" as="geometry">
+            <mxPoint x="-18" y="-31" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,206 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="TIAQTdwpxcKH8WrYjMwt">
+    <mxGraphModel dx="1928" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-28" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-29" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-28" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Requests&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0194" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; Account, game or admin request&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="-170" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Player / Admin&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-90" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-30" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-31" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-30" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Authorized state / result&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0114" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-32" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-33" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-32" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Account / room updates&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0144" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-36" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-37" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-36" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Case / avatar input&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0667" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;roundedPerimeter=1;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; Access, lobby and readiness&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="325" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;1 Accounts and Rooms&lt;br/&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="405" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-34" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-35" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-34" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Account / room records&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0505" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-13" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=1;bottom=1;left=1;right=0;align=left;verticalAlign=middle;spacingLeft=10;rounded=0;shadow=0;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt; Identity / Rooms / Members&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;br&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="880" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;D1 Accounts and Rooms&lt;br/&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="960" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-40" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-41" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-40" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Case JSON / image / failure&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0419" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; &lt;/code&gt;Case JSON / image&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="-170" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;AI / Avatar providers&lt;br/&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-90" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-38" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-39" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-38" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Case prompt / avatar seed&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0038" y="-1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-42" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-44" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-42" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Case query / updates&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0054" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-47" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-48" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-47" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Snapshot / avatar response&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0462" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;roundedPerimeter=1;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; &lt;/code&gt;Case loading / avatar request&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="325" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;2 Cases and Avatars&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="395" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-45" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-46" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-45" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Case variant / metadata&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0162" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-19" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=1;bottom=1;left=1;right=0;align=left;verticalAlign=middle;spacingLeft=10;rounded=0;shadow=0;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; &lt;/code&gt;Templates / Versions / Variants&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="880" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;D2 Case Library&lt;br/&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="960" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-55" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-56" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-55" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Game state / settings&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0147" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-21" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=1;bottom=1;left=1;right=0;align=left;verticalAlign=middle;spacingLeft=10;rounded=0;shadow=0;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; &lt;/code&gt;Games / Players / Actions &lt;br&gt; / Clues / Settings&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="-170" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;D3 Game State&lt;br/&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-90" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-53" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-54" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-53" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Game / settings updates&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0213" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-57" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-58" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-57" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Scores / achievements / audit&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0192" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;roundedPerimeter=1;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; &lt;/code&gt;Rounds / progress / admin&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="325" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;3 Game and Results&lt;br/&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="395" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-59" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-61" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-59" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Progress / audit records&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0117" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-25" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=1;bottom=1;left=1;right=0;align=left;verticalAlign=middle;spacingLeft=10;rounded=0;shadow=0;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; &lt;/code&gt;Scores / Achievements / Audit&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="220" x="880" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=13;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;D4 Progress and Audit&lt;br/&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="960" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-49" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.909;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;" target="h27dlUqizOJiWP2Zk9pk-23">
+          <mxGeometry relative="1" x="0.0051" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="222.6" />
+              <mxPoint x="564.9" y="222.6" />
+              <mxPoint x="564.9" y="540.1" />
+              <mxPoint x="525" y="540.1" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-50" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-49" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Game / admin input&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.4706" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-51" edge="1" parent="1" source="h27dlUqizOJiWP2Zk9pk-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.12;entryY=0.003;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;startArrow=classic;startFill=1;endArrow=none;endFill=0;" target="h27dlUqizOJiWP2Zk9pk-23">
+          <mxGeometry relative="1" x="0.0048" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="220.3" />
+              <mxPoint x="310" y="220.3" />
+              <mxPoint x="310" y="539.5" />
+              <mxPoint x="351.4" y="539.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h27dlUqizOJiWP2Zk9pk-52" connectable="0" parent="h27dlUqizOJiWP2Zk9pk-51" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Scoped response&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.4573" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

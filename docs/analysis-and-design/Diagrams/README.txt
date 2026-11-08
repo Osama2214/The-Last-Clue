@@ -1,0 +1,1 @@
+The 18 PNG diagrams and wireframes are embedded in the Word documents. Editable sources are the 13 draw.io files and five wireframe SVG files. Wireframes use illustrative data and do not claim implemented pages or completed case content.

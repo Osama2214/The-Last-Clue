@@ -1,0 +1,42 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build-and-test:
+    name: Build and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+      - name: Restore locked dependencies
+        run: dotnet restore LastClue.sln --locked-mode
+      - name: Build
+        run: dotnet build LastClue.sln --configuration Release --no-restore
+      - name: Test
+        run: dotnet test LastClue.sln --configuration Release --no-build --collect:"XPlat Code Coverage" --logger trx --results-directory TestResults
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: TestResults
+      - name: Publish application
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: dotnet publish src/LastClue.Web/LastClue.Web.csproj --configuration Release --no-build --output artifacts/web
+      - name: Upload application
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-${{ github.sha }}
+          path: artifacts/web

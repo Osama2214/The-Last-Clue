@@ -1,0 +1,72 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="ko3Ok2Mmjo239s4hkrsq">
+    <mxGraphModel dx="2053" dy="1206" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-15" edge="1" parent="1" source="wqOhZQqBp5xRSYZt00SY-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="wqOhZQqBp5xRSYZt00SY-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-16" connectable="0" parent="wqOhZQqBp5xRSYZt00SY-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=16;" value="&lt;code&gt;HTTPS / WebSocket&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0068" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=16;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; &lt;br&gt;&lt;br&gt; HTTPS; same-origin Identity session&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="120" width="380" x="235" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=17;" value="&#xa;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Player or Admin Browser&#xa;&lt;/code&gt;&lt;/pre&gt;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="50" width="250" x="300" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-17" edge="1" parent="1" source="wqOhZQqBp5xRSYZt00SY-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="wqOhZQqBp5xRSYZt00SY-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-20" connectable="0" parent="wqOhZQqBp5xRSYZt00SY-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=textOpacity,labelBorderColor,labelBorderWidth,labelPadding;defaultLabelBackgroundColor=page;fontFamily=Helvetica;fontSize=16;fontColor=default;fontStyle=0;labelBackgroundColor=default;" value="&lt;code dir=&quot;ltr&quot;&gt;TLS / restricted access&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0385" y="2" as="geometry">
+            <mxPoint x="78" y="-47" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-18" edge="1" parent="1" source="wqOhZQqBp5xRSYZt00SY-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="wqOhZQqBp5xRSYZt00SY-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-22" connectable="0" parent="wqOhZQqBp5xRSYZt00SY-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=textOpacity,labelBorderColor,labelBorderWidth,labelPadding;defaultLabelBackgroundColor=page;fontFamily=Helvetica;fontSize=16;fontColor=default;fontStyle=0;labelBackgroundColor=default;" value="&lt;code&gt;HTTPS; non-personal&lt;/code&gt;&lt;div&gt;&lt;code&gt;&amp;nbsp;avatar seed&lt;/code&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.75" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-19" edge="1" parent="1" source="wqOhZQqBp5xRSYZt00SY-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="wqOhZQqBp5xRSYZt00SY-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-21" connectable="0" parent="wqOhZQqBp5xRSYZt00SY-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=textOpacity,labelBorderColor,labelBorderWidth,labelPadding;defaultLabelBackgroundColor=page;fontFamily=Helvetica;fontSize=16;fontColor=default;fontStyle=0;labelBackgroundColor=default;" value="&lt;code&gt;HTTPS; case generation&lt;/code&gt;&lt;div&gt;&lt;code&gt;&amp;nbsp;at startup only&lt;/code&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0238" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=16;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; &lt;br&gt;&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; One application instance: MVC / API / SignalR&lt;br&gt; Generation, timer and outbox workers in the same deployment&lt;/code&gt;&lt;/pre&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="120" width="572" x="139" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=17;" value="&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Azure App Service&lt;br/&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="50" width="250" x="300" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=16;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; Avatar requests only&lt;br&gt; Local initials on failure&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="120" width="340" x="540" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=17;" value="&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;DiceBear&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="50" width="250" x="585" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=16;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; &lt;br&gt;&lt;br&gt;&lt;br&gt; Semantic Kernel adapter&lt;br&gt; Server-side credentials&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="120" width="380" x="235" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=17;" value="&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;AI provider&lt;br/&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="50" width="390" x="230" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontSize=16;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; &lt;br&gt;&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; Identity, games, private cases,&lt;br&gt; outbox, results and audit&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="120" width="380" x="-80" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="wqOhZQqBp5xRSYZt00SY-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=17;" value="&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Azure SQL&lt;br/&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="50" width="250" x="-15" y="560" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

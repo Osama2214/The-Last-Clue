@@ -1,0 +1,132 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="wIwX6RvEMYi_Y_3LTpmK">
+    <mxGraphModel dx="709" dy="832" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-11" edge="1" parent="1" source="A8rH_KTCSZgpn33OBYjr-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;endArrow=none;endFill=0;" target="A8rH_KTCSZgpn33OBYjr-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-12" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.5044" as="geometry">
+            <mxPoint x="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-13" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;0..*&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.6769" as="geometry">
+            <mxPoint x="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-26" edge="1" parent="1" source="A8rH_KTCSZgpn33OBYjr-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;endArrow=none;endFill=0;" target="A8rH_KTCSZgpn33OBYjr-7">
+          <mxGeometry relative="1" x="0.2029" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="80" />
+              <mxPoint x="670" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-27" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-26" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;0..1&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.9241" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-28" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-26" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;0..*&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.9338" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-32" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-26" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;hosts&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0102" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-29" edge="1" parent="1" source="A8rH_KTCSZgpn33OBYjr-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;endArrow=none;endFill=0;" target="A8rH_KTCSZgpn33OBYjr-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-30" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.8063" as="geometry">
+            <mxPoint y="-125" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-31" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.7336" y="-1" as="geometry">
+            <mxPoint x="1" y="119" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-1" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;div style=&quot;text-align: center; box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); text-align: left;&quot;&gt;AspNetUsers&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;Id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;DisplayName&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;IsBlocked&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="180" width="180" x="70" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-3" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;div style=&quot;text-align: center; box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); text-align: left;&quot;&gt;RoomMember&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); text-align: left;&quot;&gt;s&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td style=&quot;&quot;&gt;Id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FK&lt;br&gt;&lt;br&gt;FK&lt;/td&gt;&lt;td&gt;UserId&lt;br&gt;&lt;br&gt;RoomId&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="180" width="180" x="320" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-4" parent="1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;horizontal=1;labelBackgroundColor=none;autosizeText=0;fontSize=12;html=1;whiteSpace=wrap;" value="IsReady&lt;br&gt;&lt;br&gt;JoinedAt&lt;br&gt;&lt;br&gt;LeftAt" vertex="1">
+          <mxGeometry height="80" width="70" x="375" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-14" edge="1" parent="1" source="A8rH_KTCSZgpn33OBYjr-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;endArrow=none;endFill=0;" target="A8rH_KTCSZgpn33OBYjr-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-15" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.5985" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-16" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;0..*&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.5888" as="geometry">
+            <mxPoint x="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-17" edge="1" parent="1" source="A8rH_KTCSZgpn33OBYjr-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;endArrow=none;endFill=0;" target="A8rH_KTCSZgpn33OBYjr-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-18" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.7903" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-19" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;0..*&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.8006" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-7" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;div style=&quot;text-align: center; box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); text-align: left;&quot;&gt;Rooms&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;Id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;FK&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td&gt;HostUserId&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Code&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Status&lt;/code&gt;&lt;/pre&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;RowVersion&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="180" width="180" x="580" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-20" edge="1" parent="1" source="A8rH_KTCSZgpn33OBYjr-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;endArrow=none;endFill=0;" target="A8rH_KTCSZgpn33OBYjr-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-21" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.5619" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-22" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;0..8&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.3811" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-8" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;div style=&quot;text-align: center; box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); text-align: left;&quot;&gt;GamePlayer&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); text-align: left;&quot;&gt;s&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK, FK&lt;/td&gt;&lt;td&gt;GameId&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;span style=&quot;font-family: Helvetica; white-space: normal;&quot;&gt;PK, FK&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td&gt;UserId&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Role&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;CharacterKey&lt;/code&gt;&lt;/pre&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;GraceUsed&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;GraceUntil&lt;/code&gt;&lt;/pre&gt;&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="180" width="180" x="70" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-23" edge="1" parent="1" source="A8rH_KTCSZgpn33OBYjr-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;endArrow=none;endFill=0;" target="A8rH_KTCSZgpn33OBYjr-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-24" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.6264" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-25" connectable="0" parent="A8rH_KTCSZgpn33OBYjr-23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=13;" value="&lt;code&gt;0..1&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.5755" as="geometry">
+            <mxPoint x="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-9" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;div style=&quot;text-align: center; box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); text-align: left;&quot;&gt;Game&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); text-align: left;&quot;&gt;s&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;Id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;FK&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td&gt;RoomId&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Round&lt;br&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Phase&lt;/code&gt;&lt;/pre&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;PhaseEndsAt&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="180" width="180" x="320" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="A8rH_KTCSZgpn33OBYjr-10" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;div style=&quot;text-align: center; box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); text-align: left;&quot;&gt;GameCase&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); text-align: left;&quot;&gt;s&lt;/span&gt;&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK, FK&lt;/td&gt;&lt;td&gt;GameId&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;pre dir=&quot;ltr&quot;&gt;&lt;span style=&quot;font-family: Helvetica; white-space: normal;&quot;&gt;FK&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td&gt;CaseVariantId&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;PayloadJson&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="180" width="180" x="580" y="460" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

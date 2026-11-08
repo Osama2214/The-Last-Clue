@@ -1,0 +1,5 @@
+html { font-size: 16px; }
+body { color: #17354b; background: #fff; }
+a { color: #25435e; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #25435e; outline-offset: 3px; }
+.game-introduction { max-width: 48rem; padding-block: 2rem; }

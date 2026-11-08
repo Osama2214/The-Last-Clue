@@ -1,0 +1,1 @@
+Playwright browser tests belong here. Add browser installation to CI together with the first account and lobby journeys. The foundation currently validates HTTP behavior in Web.IntegrationTests; it does not claim completed browser tests.

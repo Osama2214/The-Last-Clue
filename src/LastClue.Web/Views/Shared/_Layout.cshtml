@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - The Last Clue</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="border-bottom mb-4">
+        <nav class="container py-3" aria-label="Main navigation">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">The Last Clue</a>
+        </nav>
+    </header>
+    <main class="container pb-5">@RenderBody()</main>
+    <footer class="container border-top py-3 text-secondary">The Last Clue Project Team</footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

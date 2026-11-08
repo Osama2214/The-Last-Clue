@@ -1,0 +1,72 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="us790fyJwTYxBkA7sKzf">
+    <mxGraphModel dx="1299" dy="714" grid="0" gridSize="13" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-15" edge="1" parent="1" source="iIddTY1Z_tL6-ahUCHxF-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="iIddTY1Z_tL6-ahUCHxF-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-19" connectable="0" parent="iIddTY1Z_tL6-ahUCHxF-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;HTTPS and authorized events&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.4" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;h1 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); font-size: 12px; font-weight: normal;&quot;&gt;Razor Views, Bootstrap, JavaScript&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="90" width="290" x="280" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-16" edge="1" parent="1" source="iIddTY1Z_tL6-ahUCHxF-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="iIddTY1Z_tL6-ahUCHxF-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-20" connectable="0" parent="iIddTY1Z_tL6-ahUCHxF-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Commands and role-scoped queries&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0468" as="geometry">
+            <mxPoint y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;MVC / REST controllers / SignalR hub / Identity cookies&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="420" x="215" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt; &lt;br&gt; Semantic Kernel / Gemini provider&lt;br&gt; DiceBear avatar adapter&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="90" width="290" x="455" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-17" edge="1" parent="1" source="iIddTY1Z_tL6-ahUCHxF-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="iIddTY1Z_tL6-ahUCHxF-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-22" connectable="0" parent="iIddTY1Z_tL6-ahUCHxF-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Provider interfaces&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.6296" y="-1" as="geometry">
+            <mxPoint x="2" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-18" edge="1" parent="1" source="iIddTY1Z_tL6-ahUCHxF-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" target="iIddTY1Z_tL6-ahUCHxF-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-21" connectable="0" parent="iIddTY1Z_tL6-ahUCHxF-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontColor,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;defaultLabelBackgroundColor=page;fontSize=12;" value="&lt;code&gt;Repository interfaces&lt;/code&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.5846" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt;Room, case, game, reconnect, score, profile, admin services&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="420" x="215" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;&lt;br&gt; EF Core repositories / Unit of Work&lt;br&gt; SQL Server or Azure SQL&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="90" width="290" x="105" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Browser&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="395" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Web presentation&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="395" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;" value="&#xa;&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Application services&#xa;&lt;/code&gt;&lt;/pre&gt;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="30" width="150" x="350" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;Infrastructure adapters&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="165" x="167.5" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="iIddTY1Z_tL6-ahUCHxF-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;External adapters&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="570" y="655" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
