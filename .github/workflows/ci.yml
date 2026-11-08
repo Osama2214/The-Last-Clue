@@ -36,6 +36,8 @@ jobs:
           curl --fail --silent --show-error http://127.0.0.1:8080/health
           test "$(curl --silent --show-error --output /tmp/last-clue-ready.json --write-out '%{http_code}' http://127.0.0.1:8080/health/ready)" = "503"
           test "$(docker compose exec -T web id -u)" != "0"
+          test "$(curl --silent --show-error --output /tmp/last-clue-api-error.json --write-out '%{http_code}' http://127.0.0.1:8080/api/v1/foundationapi/errors/unexpected)" = "404"
+          python3 -c 'import json, uuid; body=json.load(open("/tmp/last-clue-api-error.json")); assert body["code"] == "NOT_FOUND"; uuid.UUID(body["correlationId"])'
       - name: Container logs and shutdown
         if: always()
         run: |

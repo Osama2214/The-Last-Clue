@@ -1,22 +1,28 @@
+using LastClue.Web.Diagnostics;
+using LastClue.Web.Api;
 using LastClue.Web.Configuration;
 using LastClue.Web.Health;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Logging.AddSafeRequestLogging();
 builder.Services.AddProjectConfiguration();
 builder.Services.AddControllersWithViews();
+builder.Services.AddApiFoundation();
 builder.Services.AddHealthChecks()
     .AddCheck<ConfigurationHealthCheck>("configuration", tags: ["ready"])
     .AddCheck<FoundationReadinessCheck>("game-storage", tags: ["ready"]);
 
 var app = builder.Build();
+app.UseApiFoundation();
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
+    app.UseWhen(context => !ApiRequest.IsApi(context), pages => pages.UseExceptionHandler("/Home/Error"));
     app.UseHsts();
 }
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapStaticAssets();
 app.MapHealthChecks("/health", new HealthCheckOptions
@@ -29,6 +35,7 @@ app.MapHealthChecks("/health/ready", new HealthCheckOptions
     Predicate = registration => registration.Tags.Contains("ready"),
     ResponseWriter = HealthResponse.WriteAsync
 });
+app.MapControllers();
 app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 app.Run();

@@ -34,7 +34,7 @@ Use the URL printed by the host. For the HTTPS profile, configure a trusted loca
 | Microsoft.AspNetCore.Mvc.Testing | 10.0.12 |
 | Microsoft.Playwright | 1.64.1 |
 
-`Directory.Packages.props` owns the versions. Lock files are committed. The current test suite contains ten rule cases and twenty-six web integration tests. Infrastructure and UI test projects have no feature tests yet; browser installation and database fixtures will accompany their first implementation tasks.
+`Directory.Packages.props` owns the versions. Lock files are committed. The current tests cover game-rule boundaries, configuration, API errors, cookie authentication hooks, correlation IDs and log redaction. Infrastructure and UI test projects have no feature tests yet; browser installation and database fixtures will accompany their first implementation tasks.
 
 ## Configuration
 
@@ -75,3 +75,7 @@ Startup diagnostics and the internal configuration check identify required key n
 The web integration tests use [WebApplicationFactory](https://learn.microsoft.com/aspnet/core/test/integration-tests?view=aspnetcore-10.0). CI reads the SDK from [global.json through setup-dotnet](https://github.com/actions/setup-dotnet).
 
 Options binding and startup validation follow the [ASP.NET Core options guidance](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-10.0).
+
+## API diagnostics
+
+Use the [API error catalog](api-errors.md) and [logging policy](logging.md) when implementing request handlers. Application logs use structured JSON with safe correlation metadata; framework request logging is suppressed to prevent raw request and exception details from appearing.
