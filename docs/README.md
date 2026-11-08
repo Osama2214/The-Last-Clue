@@ -7,7 +7,7 @@ The documents below describe the agreed scope, rules and design. The task tracke
 | Planning | [Planning and management](planning/00_Complete_Phase_1_Project_Planning_and_Management.docx) | Proposal, plan, roles, risks and KPIs |
 | Requirements | [Requirements gathering](requirements/00_Complete_Requirements_Gathering.docx) | Stakeholders, stories, use cases, functional and quality requirements |
 | Design | [System analysis and design](analysis-and-design/00_Complete_System_Analysis_and_Design.docx) | Architecture, schema, behavior, wireframes, deployment, API contracts and test plan |
-| Tracking | [Task workbook](tracking/Taska.xlsx) | 106 implementation and release tasks with dependencies |
+| Tracking | [Online task tracker](https://docs.google.com/spreadsheets/d/14sEpuYsHtw5xIbB4qP7JUSKR0zdDnTnz/edit?gid=875743418#gid=875743418) | 106 implementation and release tasks with dependencies; the local workbook is a snapshot |
 
 The six planning documents, five requirements documents and seven design documents are retained. [Diagrams](analysis-and-design/Diagrams) contains the 13 editable draw.io files, five editable wireframe SVGs and the 18 PNG images used in the design documents.
 

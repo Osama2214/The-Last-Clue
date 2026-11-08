@@ -1,9 +1,12 @@
+using LastClue.Web.Configuration;
 using LastClue.Web.Health;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddProjectConfiguration();
 builder.Services.AddControllersWithViews();
 builder.Services.AddHealthChecks()
+    .AddCheck<ConfigurationHealthCheck>("configuration", tags: ["ready"])
     .AddCheck<FoundationReadinessCheck>("game-storage", tags: ["ready"]);
 
 var app = builder.Build();

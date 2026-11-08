@@ -4,7 +4,7 @@ The Last Clue is a multiplayer mystery investigation game for 4–8 players, bui
 
 ## Current progress
 
-The repository contains the project documentation, editable diagrams, task tracker and the .NET solution foundation. The web host, health endpoints and initial rule tests run locally. Accounts, persistence, live rooms, case generation and complete gameplay are the next implementation workstreams.
+The repository contains the project documentation, editable diagrams, task tracker and the .NET solution foundation. The web host, typed configuration checks, health endpoints and initial tests run locally. Accounts, persistence, live rooms, case generation and complete gameplay are the next implementation workstreams.
 
 ## Team
 
@@ -76,7 +76,7 @@ Start with the [documentation index](docs/README.md). The combined documents are
 - [Planning and management](docs/planning/00_Complete_Phase_1_Project_Planning_and_Management.docx)
 - [Requirements](docs/requirements/00_Complete_Requirements_Gathering.docx)
 - [Analysis and design](docs/analysis-and-design/00_Complete_System_Analysis_and_Design.docx)
-- [Task tracker](docs/tracking/Taska.xlsx)
+- [Online task tracker](https://docs.google.com/spreadsheets/d/14sEpuYsHtw5xIbB4qP7JUSKR0zdDnTnz/edit?gid=875743418#gid=875743418)
 
 ## Contribution workflow
 
