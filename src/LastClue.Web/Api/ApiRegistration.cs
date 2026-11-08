@@ -8,6 +8,7 @@ internal static class ApiRegistration
 {
     public static IServiceCollection AddApiFoundation(this IServiceCollection services)
     {
+        services.Configure<MvcOptions>(options => options.Filters.Add(new ApiErrorResultFilter()));
         services.Configure<ApiBehaviorOptions>(options =>
         {
             options.SuppressMapClientErrors = true;

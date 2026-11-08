@@ -18,6 +18,11 @@ public sealed class FoundationApiController : ApiControllerBase
     [HttpGet("status/{status:int}")]
     public IActionResult EmptyStatus(int status) => StatusCode(status);
 
+    [HttpGet("custom-error/{status:int}")]
+    public IActionResult CustomError(int status) => status == 400
+        ? new ContentResult { StatusCode = 400, Content = "private-result-sentinel", ContentType = "text/html" }
+        : StatusCode(status, new { detail = "private-result-sentinel" });
+
     [HttpPost("validate")]
     public IActionResult Validate(Input input) => Ok(new { accepted = true });
 

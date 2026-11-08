@@ -124,6 +124,19 @@ public sealed class ApiContractTests
         Assert.True(Guid.TryParse(live.Headers.GetValues("X-Correlation-Id").Single(), out _));
     }
 
+    [Theory]
+    [InlineData(400, "INVALID_INPUT")]
+    [InlineData(422, "HTTP_ERROR")]
+    [InlineData(500, "INTERNAL_ERROR")]
+    public async Task Custom_mvc_error_results_do_not_leak_their_original_content(int status, string code)
+    {
+        using var factory = new ApiTestFactory();
+        using var client = factory.ApiClient();
+        using var response = await client.GetAsync($"/api/v1/foundationapi/custom-error/{status}");
+        using var body = await AssertError(response, status, code);
+        Assert.DoesNotContain("private-result-sentinel", body.RootElement.GetRawText());
+    }
+
     internal static async Task<JsonDocument> AssertError(HttpResponseMessage response, int status, string code)
     {
         Assert.Equal(status, (int)response.StatusCode);
