@@ -1,5 +1,7 @@
 using LastClue.Application.Commands;
 using LastClue.Application.Interfaces;
+using LastClue.Application.Rooms;
+using LastClue.Infrastructure.Rooms;
 using LastClue.Infrastructure.Repositories;
 using LastClue.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +18,9 @@ public static class InfrastructureRegistration
         services.AddScoped<IActionReceiptService, ActionReceiptService>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IRoomRepository, RoomRepository>();
+        services.AddScoped<IRoomService, RoomService>();
+        services.AddSingleton<IRoomCodeGenerator, RoomCodeGenerator>();
+        services.AddSingleton<LobbyPresence>();
         services.AddScoped<IGameRepository, GameRepository>();
         services.AddScoped<ICaseRepository, CaseRepository>();
         services.AddScoped<IScoreRepository, ScoreRepository>();

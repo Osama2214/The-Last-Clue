@@ -2,7 +2,7 @@ namespace LastClue.Application.Exceptions;
 
 public enum DomainErrorCode
 {
-    InvalidInput, Forbidden, NotFound, PhaseChanged, RoomFull, AlreadyInRoom, ReplayMismatch, RateLimited, ConcurrencyConflict, Duplicate
+    InvalidInput, Forbidden, NotFound, PhaseChanged, RoomFull, RoomNotOpen, AlreadyInRoom, ReplayMismatch, RateLimited, ConcurrencyConflict, Duplicate
 }
 
 public abstract class DomainException : Exception
@@ -21,7 +21,7 @@ public class ConflictException : DomainException
     public ConflictException(DomainErrorCode code, long? currentStateVersion = null, string? detail = null)
         : base(code, detail)
     {
-        if (code is not (DomainErrorCode.PhaseChanged or DomainErrorCode.RoomFull
+        if (code is not (DomainErrorCode.PhaseChanged or DomainErrorCode.RoomFull or DomainErrorCode.RoomNotOpen
             or DomainErrorCode.AlreadyInRoom or DomainErrorCode.ReplayMismatch
             or DomainErrorCode.ConcurrencyConflict or DomainErrorCode.Duplicate))
             throw new ArgumentOutOfRangeException(nameof(code));

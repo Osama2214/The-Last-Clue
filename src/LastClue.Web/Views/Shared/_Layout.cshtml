@@ -1,7 +1,10 @@
+@using Microsoft.AspNetCore.Antiforgery
+@inject IAntiforgery Antiforgery
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="csrf-token" content="@Antiforgery.GetAndStoreTokens(Context).RequestToken" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - The Last Clue</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -9,14 +12,32 @@
 </head>
 <body>
     <header class="border-bottom mb-4">
-        <nav class="container py-3" aria-label="Main navigation">
-            <a class="navbar-brand" asp-controller="Home" asp-action="Index">The Last Clue</a>
+        <nav class="container d-flex flex-wrap align-items-center gap-3 py-3" aria-label="Main navigation">
+            <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">The Last Clue</a>
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <a href="/#profile">Profile</a>
+                <span class="text-secondary" aria-disabled="true">Leaderboard</span>
+                @if (User.IsInRole("Admin"))
+                {
+                    <span class="text-secondary" aria-disabled="true">Admin</span>
+                }
+                <form data-auth-form="logout" method="post">
+                    <button class="btn btn-outline-primary btn-sm" type="submit">Sign out</button>
+                </form>
+            }
+            <button class="btn btn-outline-secondary btn-sm ms-auto" type="button" disabled>English</button>
         </nav>
     </header>
-    <main class="container pb-5">@RenderBody()</main>
+    <main class="container pb-5">
+        <p class="field-error" role="alert" data-global-error hidden></p>
+        @RenderBody()
+    </main>
     <footer class="container border-top py-3 text-secondary">The Last Clue Project Team</footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/api.js" asp-append-version="true"></script>
+    <script src="~/js/auth.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

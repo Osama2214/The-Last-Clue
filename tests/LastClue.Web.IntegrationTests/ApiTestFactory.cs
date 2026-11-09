@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,7 +13,8 @@ public sealed class ApiTestFactory(string environment = "Development") : WebAppl
         builder.ConfigureTestServices(services =>
         {
             services.AddControllersWithViews().AddApplicationPart(typeof(FoundationApiController).Assembly);
-            services.AddAuthentication().AddCookie(IdentityConstants.ApplicationScheme);
+            services.ConfigureApplicationCookie(options =>
+                options.Events.OnValidatePrincipal = _ => Task.CompletedTask);
         });
     }
 

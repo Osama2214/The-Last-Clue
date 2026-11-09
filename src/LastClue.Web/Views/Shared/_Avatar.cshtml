@@ -1,0 +1,11 @@
+@model AvatarViewModel
+@inject LastClue.Web.Avatars.IAvatarService Avatars
+@{ var source = Avatars.GetUrl(Model.Seed); }
+<span class="avatar" aria-hidden="true">
+    @if (source is not null)
+    {
+        <img src="@source" width="40" height="40" loading="lazy" referrerpolicy="no-referrer" alt=""
+             onerror="this.hidden = true; this.nextElementSibling.hidden = false;" />
+    }
+    <span class="avatar-initials" hidden="@(source is not null)">@Model.Initials</span>
+</span>

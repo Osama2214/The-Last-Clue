@@ -41,6 +41,7 @@ internal static class ApiErrors
         ApiError? error = exception is ConflictException conflict ? conflict.Code switch
         {
             DomainErrorCode.PhaseChanged => Error(context, "PHASE_CHANGED", "The game phase has changed. Reload the current state.", conflict.CurrentStateVersion),
+            DomainErrorCode.RoomNotOpen => Error(context, "ROOM_NOT_OPEN", "This room is no longer accepting players."),
             DomainErrorCode.RoomFull => Error(context, "ROOM_FULL", "This room is full."),
             DomainErrorCode.AlreadyInRoom => Error(context, "ALREADY_IN_ROOM", "You already belong to a room."),
             DomainErrorCode.ReplayMismatch => Error(context, "REPLAY_MISMATCH", "This request ID was used for a different request."),

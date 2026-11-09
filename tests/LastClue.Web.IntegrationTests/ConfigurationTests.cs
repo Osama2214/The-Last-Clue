@@ -133,15 +133,6 @@ public sealed class ConfigurationTests
         Assert.Equal("{\"status\":\"Healthy\"}", await response.Content.ReadAsStringAsync());
     }
 
-    private sealed class SqlServerFactAttribute : FactAttribute
-    {
-        public SqlServerFactAttribute()
-        {
-            if (string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("LAST_CLUE_TEST_SQLSERVER")))
-                Skip = "Set LAST_CLUE_TEST_SQLSERVER to run against SQL Server.";
-        }
-    }
-
     private static WebApplicationFactory<Program> CreateFactory(
         Dictionary<string, string?> settings, CapturedLogs? logs = null)
     {

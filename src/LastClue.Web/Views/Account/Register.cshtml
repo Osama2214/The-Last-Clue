@@ -1,0 +1,25 @@
+@{ ViewData["Title"] = "Create an account"; }
+<section class="account-panel">
+    <h1>Create an account</h1>
+    <form data-auth-form="register" method="post">
+        <p class="field-error" role="alert" data-form-error hidden></p>
+        <div class="mb-3">
+            <label for="displayName" class="form-label">Display name</label>
+            <input id="displayName" name="displayName" autocomplete="nickname" maxlength="80" required class="form-control" aria-describedby="display-name-error" />
+            <span id="display-name-error" class="field-error" data-field-error="displayName"></span>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" type="email" autocomplete="username" maxlength="256" required class="form-control" aria-describedby="email-error" />
+            <span id="email-error" class="field-error" data-field-error="email"></span>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required class="form-control" aria-describedby="password-help password-error" />
+            <div id="password-help" class="form-text">Use at least 8 characters and include a digit.</div>
+            <span id="password-error" class="field-error" data-field-error="password"></span>
+        </div>
+        <button class="btn btn-primary" type="submit">Create account</button>
+    </form>
+    <p class="mt-3"><a asp-action="Login">Already have an account? Sign in</a></p>
+</section>
