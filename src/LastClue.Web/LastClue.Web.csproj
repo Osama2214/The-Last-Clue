@@ -1,6 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup><UserSecretsId>the-last-clue-local-development</UserSecretsId></PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="../LastClue.Application/LastClue.Application.csproj" />
     <ProjectReference Include="../LastClue.Infrastructure/LastClue.Infrastructure.csproj" />
     <ProjectReference Include="../LastClue.Workers/LastClue.Workers.csproj" />
