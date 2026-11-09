@@ -1,1 +1,3 @@
-Repository and SQL Server integration tests belong here. Add them when the persistence mappings and migrations are implemented. No database tests have been claimed at the foundation stage.
+# Infrastructure tests
+
+Core SQL model tests generate the SQL Server schema and verify the constraints, indexes and relationships that protect room and game state. They run without a database server. Tests that apply migrations and exercise database constraints against a running SQL Server are tracked separately.
