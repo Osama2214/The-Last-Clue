@@ -26,7 +26,13 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options)
     public DbSet<AccusationVote> AccusationVotes => Set<AccusationVote>();
     public DbSet<Arrest> Arrests => Set<Arrest>();
     public DbSet<PendingScoreEvent> PendingScoreEvents => Set<PendingScoreEvent>();
-    public DbSet<ScoreEntry> ScoreEntrys => Set<ScoreEntry>();
+    public DbSet<ScoreEntry> ScoreEntries => Set<ScoreEntry>();
+    public DbSet<RankDefinition> RankDefinitions => Set<RankDefinition>();
+    public DbSet<AchievementDefinition> AchievementDefinitions => Set<AchievementDefinition>();
+    public DbSet<PlayerAchievement> PlayerAchievements => Set<PlayerAchievement>();
+    public DbSet<AdminAudit> AdminAudit => Set<AdminAudit>();
+    public DbSet<ActionReceipt> ActionReceipts => Set<ActionReceipt>();
+    public DbSet<OutboxMessage> OutboxMessages => Set<OutboxMessage>();
 
     protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
     {

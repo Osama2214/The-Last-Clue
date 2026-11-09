@@ -14,6 +14,7 @@ internal sealed class GenerationJobConfiguration : IEntityTypeConfiguration<Gene
         builder.Property(x => x.LastErrorCode).HasColumnType("varchar(40)");
         builder.HasIndex(x => x.GameId).IsUnique();
         builder.HasIndex(x => x.RequestId).IsUnique();
+        builder.HasIndex(x => new { x.Status, x.LeaseUntil });
         builder.HasOne<Game>().WithOne().HasForeignKey<GenerationJob>(x => x.GameId);
     }
 }

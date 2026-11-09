@@ -27,3 +27,13 @@
 | AdminAudit | A record of an administrative action and its safe metadata. |
 | ActionReceipt | The saved outcome of an idempotent request. |
 | OutboxMessage | An event stored for delivery after its transaction commits. |
+
+## Event delivery fields
+
+| Column | SQL type | Purpose |
+| --- | --- | --- |
+| Rooms.StateVersion | bigint, required | Orders committed lobby updates. |
+| OutboxMessages.RoomId | uniqueidentifier, nullable | References Rooms for lobby events, including events created before a game exists. |
+| OutboxMessages.GameId | uniqueidentifier, nullable | References Games for game events. When UserId is present for a game event, (GameId, UserId) references GamePlayers. |
+
+The database requires exactly one outbox target. Lobby events carry the room state version, and game events carry the game state version.

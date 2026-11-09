@@ -12,6 +12,7 @@ internal sealed class ScoreEntryConfiguration : IEntityTypeConfiguration<ScoreEn
         builder.Property(x => x.UserId).HasMaxLength(450);
         builder.Property(x => x.EventKey).HasColumnType("varchar(80)");
         builder.HasIndex(x => new { x.GameId, x.UserId, x.EventKey }).IsUnique();
+        builder.HasIndex(x => new { x.CompletedAt, x.UserId }).IncludeProperties(x => x.Delta);
         builder.HasOne<GamePlayer>().WithMany().HasForeignKey(x => new { x.GameId, x.UserId });
     }
 }
