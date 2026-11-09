@@ -4,7 +4,7 @@
 
 Application owns domain rules, service contracts and DTOs. It does not depend on Web, Infrastructure or Workers. Infrastructure implements persistence and external adapters. Workers contains hosted generation, timer and outbox services. Web is the composition root and owns transport and views. Both HTTP requests and workers will call the same application rules.
 
-The current implementation includes the web shell, health probes, API foundation, domain entities and EF Core mappings for the SQL Server schema. Migrations, repositories, account flows, SignalR and background workers are tracked as separate tasks.
+The current implementation includes the web shell, health probes, API foundation, domain entities and EF Core mappings for the SQL Server schema. The initial migration creates the schema. Scoped repositories share AppDbContext and the unit of work. Account flows, SignalR and background workers are tracked as separate tasks.
 
 ## Consistency and visibility
 
@@ -21,3 +21,7 @@ AI generation shares one 20-second deadline from accepted server time across que
 ## Existing design assets
 
 The complete architecture, ERD, class, DFD, sequence, activity, state and deployment views are in [analysis and design](analysis-and-design/00_Complete_System_Analysis_and_Design.docx).
+
+## Repository methods
+
+Add the use-case method to the corresponding Application interface and implement it in Infrastructure. Return the smallest projection that serves the caller. Keep game rules and authorization in Application. Use one service scope per command. Start a transaction before locking a game, save tracked changes once the command is ready, then commit. On failure, roll back and discard the command scope before retrying.

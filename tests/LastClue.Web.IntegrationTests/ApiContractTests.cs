@@ -17,6 +17,7 @@ public sealed class ApiContractTests
         foreach (var (kind, status, code) in new[]
         {
             ("validation", 400, "INVALID_INPUT"), ("forbidden", 403, "FORBIDDEN"),
+            ("concurrency", 409, "CONFLICT"), ("duplicate", 409, "CONFLICT"),
             ("not-found", 404, "NOT_FOUND"), ("phase", 409, "PHASE_CHANGED"),
             ("room-full", 409, "ROOM_FULL"), ("already-in-room", 409, "ALREADY_IN_ROOM"),
             ("replay", 409, "REPLAY_MISMATCH"), ("rate-limit", 429, "RATE_LIMITED"),
