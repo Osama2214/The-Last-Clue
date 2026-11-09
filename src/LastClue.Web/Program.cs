@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-var builder = WebApplication.CreateBuilder(args);
+var seedSettings = args.Length > 0 && args[0] == SettingsSeedCommand.Name;
+var builder = WebApplication.CreateBuilder(seedSettings ? [] : args);
 builder.Logging.AddSafeRequestLogging();
 builder.Services.AddProjectConfiguration();
 builder.Services.AddDbContext<AppDbContext>((services, options) =>
@@ -21,6 +22,12 @@ builder.Services.AddHealthChecks()
     .AddCheck<FoundationReadinessCheck>("game-storage", tags: ["ready"]);
 
 var app = builder.Build();
+if (seedSettings)
+{
+    await using (app)
+        Environment.ExitCode = await SettingsSeedCommand.RunAsync(app.Services, args);
+    return;
+}
 app.UseApiFoundation();
 if (!app.Environment.IsDevelopment())
 {

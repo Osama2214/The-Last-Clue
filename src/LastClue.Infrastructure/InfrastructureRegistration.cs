@@ -1,5 +1,6 @@
 using LastClue.Application.Interfaces;
 using LastClue.Infrastructure.Repositories;
+using LastClue.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace LastClue.Infrastructure;
@@ -8,6 +9,7 @@ public static class InfrastructureRegistration
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
+        services.AddScoped<DbSeeder>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IRoomRepository, RoomRepository>();
         services.AddScoped<IGameRepository, GameRepository>();
