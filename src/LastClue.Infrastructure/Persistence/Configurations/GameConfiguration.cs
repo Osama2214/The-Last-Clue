@@ -33,6 +33,5 @@ internal sealed class GameConfiguration : IEntityTypeConfiguration<Game>
         builder.Ignore(x => x.Questions);
         builder.Ignore(x => x.Votes);
         builder.Ignore(x => x.Arrests);
-        builder.Ignore(x => x.Clues);
     }
 }

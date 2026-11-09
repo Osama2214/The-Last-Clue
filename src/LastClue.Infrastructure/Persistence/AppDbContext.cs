@@ -14,6 +14,13 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options)
     public DbSet<GamePlayer> GamePlayers => Set<GamePlayer>();
     public DbSet<SettingsVersion> SettingsVersions => Set<SettingsVersion>();
     public DbSet<PlayerConnection> PlayerConnections => Set<PlayerConnection>();
+    public DbSet<CaseTemplate> CaseTemplates => Set<CaseTemplate>();
+    public DbSet<CaseVersion> CaseVersions => Set<CaseVersion>();
+    public DbSet<CaseVariant> CaseVariants => Set<CaseVariant>();
+    public DbSet<GameCase> GameCases => Set<GameCase>();
+    public DbSet<GameClue> GameClues => Set<GameClue>();
+    public DbSet<ClueRecipient> ClueRecipients => Set<ClueRecipient>();
+    public DbSet<GenerationJob> GenerationJobs => Set<GenerationJob>();
 
     protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
     {
