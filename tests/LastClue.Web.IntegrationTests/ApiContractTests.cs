@@ -138,6 +138,37 @@ public sealed class ApiContractTests
         Assert.DoesNotContain("private-result-sentinel", body.RootElement.GetRawText());
     }
 
+    [Theory]
+    [InlineData(null)]
+    [InlineData("not-a-guid")]
+    [InlineData("00000000-0000-0000-0000-000000000000")]
+    public async Task Idempotent_actions_require_a_nonempty_guid_header(string? key)
+    {
+        using var factory = new ApiTestFactory();
+        using var client = factory.ApiClient();
+        using var request = new HttpRequestMessage(HttpMethod.Post, "/api/v1/foundationapi/idempotency-test");
+        if (key is not null)
+            request.Headers.Add("Idempotency-Key", key);
+
+        using var response = await client.SendAsync(request);
+        using var body = await AssertError(response, 400, "INVALID_INPUT");
+    }
+
+    [Fact]
+    public async Task Idempotent_actions_receive_the_parsed_request_key()
+    {
+        using var factory = new ApiTestFactory();
+        using var client = factory.ApiClient();
+        using var request = new HttpRequestMessage(HttpMethod.Post, "/api/v1/foundationapi/idempotency-test");
+        var key = Guid.NewGuid();
+        request.Headers.Add("Idempotency-Key", key.ToString());
+
+        using var response = await client.SendAsync(request);
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        using var body = JsonDocument.Parse(await response.Content.ReadAsStringAsync());
+        Assert.Equal(key, body.RootElement.GetProperty("requestId").GetGuid());
+    }
+
     internal static async Task<JsonDocument> AssertError(HttpResponseMessage response, int status, string code)
     {
         Assert.Equal(status, (int)response.StatusCode);

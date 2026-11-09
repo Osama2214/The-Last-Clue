@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using LastClue.Application.Exceptions;
+using LastClue.Web.Api;
 using LastClue.Web.Controllers;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -22,6 +23,10 @@ public sealed class FoundationApiController : ApiControllerBase
     public IActionResult CustomError(int status) => status == 400
         ? new ContentResult { StatusCode = 400, Content = "private-result-sentinel", ContentType = "text/html" }
         : StatusCode(status, new { detail = "private-result-sentinel" });
+
+    [IdempotencyFilter]
+    [HttpPost("idempotency-test")]
+    public IActionResult IdempotencyTest() => Ok(new { requestId = IdempotencyFilterAttribute.GetRequestId(HttpContext) });
 
     [HttpPost("validate")]
     public IActionResult Validate(Input input) => Ok(new { accepted = true });

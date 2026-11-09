@@ -1,3 +1,4 @@
+using LastClue.Application.Commands;
 using LastClue.Application.Interfaces;
 using LastClue.Infrastructure.Repositories;
 using LastClue.Infrastructure.Persistence;
@@ -10,6 +11,9 @@ public static class InfrastructureRegistration
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
         services.AddScoped<DbSeeder>();
+        services.AddSingleton(TimeProvider.System);
+        services.AddScoped<GameCommandRunner>();
+        services.AddScoped<IActionReceiptService, ActionReceiptService>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IRoomRepository, RoomRepository>();
         services.AddScoped<IGameRepository, GameRepository>();
