@@ -22,8 +22,40 @@ jobs:
         run: dotnet restore LastClue.sln --locked-mode
       - name: Build
         run: dotnet build LastClue.sln --configuration Release --no-restore
+      - name: Start SQL Server for integration tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          password="Aa9!$(openssl rand -hex 24)"
+          echo "::add-mask::$password"
+          docker run --detach --rm --name last-clue-ci-sql \
+            --publish 127.0.0.1::1433 \
+            --env ACCEPT_EULA=Y --env MSSQL_PID=Developer --env MSSQL_MEMORY_LIMIT_MB=2048 \
+            --env MSSQL_SA_PASSWORD="$password" mcr.microsoft.com/mssql/server:2022-latest
+          for attempt in {1..30}; do
+            if docker exec --env SQLCMDPASSWORD="$password" last-clue-ci-sql \
+              /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -C -b -l 2 -Q 'SELECT 1' >/dev/null 2>&1; then
+              address=$(docker port last-clue-ci-sql 1433/tcp)
+              port=${address##*:}
+              connection="Server=127.0.0.1,$port;Database=master;User ID=sa;Password=$password;Encrypt=True;TrustServerCertificate=True"
+              echo "::add-mask::$connection"
+              echo "LAST_CLUE_TEST_SQLSERVER=$connection" >> "$GITHUB_ENV"
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "SQL Server did not become ready"
+          exit 1
       - name: Test
         run: dotnet test LastClue.sln --configuration Release --no-build --collect:"XPlat Code Coverage" --logger trx --results-directory TestResults
+      - name: Generate Application coverage
+        if: ${{ !cancelled() && hashFiles('TestResults/**/coverage.cobertura.xml') != '' }}
+        run: |
+          dotnet tool restore
+          dotnet reportgenerator "-reports:TestResults/**/coverage.cobertura.xml" "-targetdir:Coverage" "-assemblyfilters:+LastClue.Application" "-reporttypes:Html"
+      - name: Stop test database
+        if: always()
+        run: docker stop last-clue-ci-sql || true
       - name: Validate Compose configuration
         run: docker compose config --quiet
       - name: Build container
@@ -49,6 +81,12 @@ jobs:
         with:
           name: test-results
           path: TestResults
+      - name: Upload Application coverage
+        if: ${{ !cancelled() && hashFiles('Coverage/index.html') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: application-coverage
+          path: Coverage
       - name: Publish application
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: dotnet publish src/LastClue.Web/LastClue.Web.csproj --configuration Release --no-build --output artifacts/web

@@ -25,7 +25,7 @@ public sealed class FoundationTests : IClassFixture<WebApplicationFactory<Progra
     }
 
     [Fact]
-    public async Task Liveness_does_not_depend_on_unimplemented_game_storage()
+    public async Task Liveness_does_not_require_a_database()
     {
         using var response = await _client.GetAsync("/health");
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
@@ -34,7 +34,7 @@ public sealed class FoundationTests : IClassFixture<WebApplicationFactory<Progra
     }
 
     [Fact]
-    public async Task Readiness_does_not_claim_the_unfinished_game_is_ready()
+    public async Task Readiness_is_unhealthy_without_database_configuration()
     {
         using var response = await _client.GetAsync("/health/ready");
         Assert.Equal(HttpStatusCode.ServiceUnavailable, response.StatusCode);

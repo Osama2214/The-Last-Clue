@@ -48,7 +48,7 @@ The Compose environment is Development and uses local HTTP. For hosting, configu
 | Endpoint | Current response | Meaning |
 | --- | --- | --- |
 | `/health` | 200 | The web process is alive; Docker uses this endpoint for its health check |
-| `/health/ready` | 503 | Game storage, configuration and reviewed case coverage are not implemented yet |
+| `/health/ready` | 503 | The default Compose configuration has no SQL Server connection |
 
 A healthy container confirms that the web host runs, not that gameplay is complete. Startup, home-page content, static CSS, liveness, readiness and the runtime user are checked in CI.
 

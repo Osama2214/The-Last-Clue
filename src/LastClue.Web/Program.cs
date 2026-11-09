@@ -19,7 +19,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddApiFoundation();
 builder.Services.AddHealthChecks()
     .AddCheck<ConfigurationHealthCheck>("configuration", tags: ["ready"])
-    .AddCheck<FoundationReadinessCheck>("game-storage", tags: ["ready"]);
+    .AddCheck<SqlReadinessCheck>("sql-server", tags: ["ready"], timeout: TimeSpan.FromSeconds(4));
 
 var app = builder.Build();
 if (seedSettings)

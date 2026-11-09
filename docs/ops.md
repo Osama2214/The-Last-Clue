@@ -1,11 +1,11 @@
 # Operational checks
 
-| Probe | Foundation response | Intended completed behavior |
-| --- | --- | --- |
-| GET /health | 200, status Healthy | Process liveness |
-| GET /health/ready | 503, status Unhealthy | SQL reachable, core configuration valid and five complete reviewed case families available |
+| Probe | Behavior |
+| --- | --- |
+| GET /health | Returns 200 while the web process is serving requests |
+| GET /health/ready | Returns 200 when core configuration is valid and SQL Server is reachable, or 503 otherwise |
 
-Both responses expose the status only and are not cached. The configuration readiness check detects a missing or malformed ConnectionStrings:Default value and reports the key name internally, without exposing its value. It does not open a database connection. AI-disabled, missing-key and known-outage settings do not by themselves fail configuration readiness. The readiness check deliberately stays unhealthy until the actual persistence and case coverage checks replace the foundation check. A successful build or liveness response does not demonstrate a playable game.
+Both probes return only the status and disable caching. Configure `ConnectionStrings:Default` for the target SQL Server. Missing AI credentials, a disabled provider or a known outage still permit database readiness. Reviewed case coverage will be added to the readiness probe alongside the local case library.
 
 The first deployment will use one Azure App Service instance and Azure SQL. No hosting resources or provider credentials are created by the repository foundation. CI publishes a downloadable artifact; application deployment and post-release smoke checks are separate backlog tasks.
 
