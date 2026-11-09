@@ -8,3 +8,6 @@
 *.xlsx binary
 *.pdf binary
 *.png binary
+*.yaml text eol=lf
+Dockerfile text eol=lf
+.dockerignore text eol=lf

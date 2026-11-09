@@ -1,0 +1,20 @@
+name: the-last-clue
+
+services:
+  web:
+    image: the-last-clue:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "127.0.0.1:${LAST_CLUE_HTTP_PORT:-8080}:8080"
+    volumes:
+      - data-protection-keys:/home/app/.aspnet/DataProtection-Keys
+    restart: unless-stopped
+    stop_grace_period: 15s
+
+volumes:
+  data-protection-keys:

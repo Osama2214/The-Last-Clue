@@ -1,0 +1,25 @@
+# Only application source and build configuration belong in the build context.
+.git
+.github
+.vs
+.vscode
+**/bin
+**/obj
+**/TestResults
+**/artifacts
+docs
+tests
+*.md
+*.sln
+.env
+.env.*
+**/.env
+**/.env.*
+**/appsettings.*.local.json
+**/secrets.json
+**/*.pfx
+**/*.p12
+**/*.pem
+**/*.key
+**/*.user
+**/*.suo
