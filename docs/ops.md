@@ -21,7 +21,7 @@ The first release script is [db/release-001.sql](../db/release-001.sql). It crea
    ```
 3. Verify that dbo.__EFMigrationsHistory contains InitialCreate, then deploy the application. The web application does not apply migrations at startup.
 
-To regenerate the first release script from the repository root:
+To regenerate the first release script from the repository root, save its opening SET statements and GO batch first. Restore that batch at the top of the generated file so filtered indexes can be created with any supported client:
 
 ```powershell
 dotnet tool restore

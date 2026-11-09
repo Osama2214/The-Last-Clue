@@ -1,3 +1,13 @@
+-- Required by SQL Server for filtered indexes.
+SET ANSI_NULLS ON;
+SET ANSI_PADDING ON;
+SET ANSI_WARNINGS ON;
+SET ARITHABORT ON;
+SET CONCAT_NULL_YIELDS_NULL ON;
+SET QUOTED_IDENTIFIER ON;
+SET NUMERIC_ROUNDABORT OFF;
+GO
+
 IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
 BEGIN
     CREATE TABLE [__EFMigrationsHistory] (
@@ -11,11 +21,11 @@ GO
 BEGIN TRANSACTION;
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [AspNetRoles] (
-        [Id] nvarchar(450) NOT NULL,
+        [Id] nvarchar(128) NOT NULL,
         [Name] nvarchar(256) NULL,
         [NormalizedName] nvarchar(256) NULL,
         [ConcurrencyStamp] nvarchar(max) NULL,
@@ -25,7 +35,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [AspNetUsers] (
@@ -54,7 +64,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [CaseTemplates] (
@@ -68,12 +78,12 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [AspNetRoleClaims] (
         [Id] int NOT NULL IDENTITY,
-        [RoleId] nvarchar(450) NOT NULL,
+        [RoleId] nvarchar(128) NOT NULL,
         [ClaimType] nvarchar(max) NULL,
         [ClaimValue] nvarchar(max) NULL,
         CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
@@ -83,7 +93,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [AdminAudit] (
@@ -102,7 +112,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [AspNetUserClaims] (
@@ -117,12 +127,12 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [AspNetUserLogins] (
-        [LoginProvider] nvarchar(450) NOT NULL,
-        [ProviderKey] nvarchar(450) NOT NULL,
+        [LoginProvider] nvarchar(128) NOT NULL,
+        [ProviderKey] nvarchar(128) NOT NULL,
         [ProviderDisplayName] nvarchar(max) NULL,
         [UserId] nvarchar(450) NOT NULL,
         CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
@@ -132,12 +142,12 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [AspNetUserRoles] (
         [UserId] nvarchar(450) NOT NULL,
-        [RoleId] nvarchar(450) NOT NULL,
+        [RoleId] nvarchar(128) NOT NULL,
         CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY NONCLUSTERED ([UserId], [RoleId]),
         CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE NO ACTION,
         CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE NO ACTION
@@ -146,13 +156,13 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [AspNetUserTokens] (
         [UserId] nvarchar(450) NOT NULL,
-        [LoginProvider] nvarchar(450) NOT NULL,
-        [Name] nvarchar(450) NOT NULL,
+        [LoginProvider] nvarchar(128) NOT NULL,
+        [Name] nvarchar(128) NOT NULL,
         [Value] nvarchar(max) NULL,
         CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY NONCLUSTERED ([UserId], [LoginProvider], [Name]),
         CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE NO ACTION
@@ -161,7 +171,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [Rooms] (
@@ -182,7 +192,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [SettingsVersions] (
@@ -199,7 +209,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [CaseVersions] (
@@ -218,7 +228,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [RoomMembers] (
@@ -236,7 +246,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [AchievementDefinitions] (
@@ -253,7 +263,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [Games] (
@@ -288,7 +298,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [RankDefinitions] (
@@ -304,7 +314,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [CaseVariants] (
@@ -324,7 +334,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [ActionReceipts] (
@@ -344,7 +354,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [GameClues] (
@@ -366,7 +376,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [GamePlayers] (
@@ -389,7 +399,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [GenerationJobs] (
@@ -409,7 +419,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [GameCases] (
@@ -428,7 +438,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [AccusationVotes] (
@@ -447,7 +457,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [Arrests] (
@@ -465,7 +475,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [ClueRecipients] (
@@ -481,7 +491,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [OutboxMessages] (
@@ -506,7 +516,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [PendingScoreEvents] (
@@ -522,7 +532,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [PlayerAchievements] (
@@ -540,7 +550,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [PlayerConnections] (
@@ -556,7 +566,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [Questions] (
@@ -581,7 +591,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [ScoreEntries] (
@@ -598,7 +608,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE TABLE [Statements] (
@@ -618,7 +628,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_AccusationVotes_GameId_DetectiveId] ON [AccusationVotes] ([GameId], [DetectiveId]);
@@ -626,7 +636,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_AccusationVotes_GameId_TargetId] ON [AccusationVotes] ([GameId], [TargetId]);
@@ -634,7 +644,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_AchievementDefinitions_SettingsVersionId_Code] ON [AchievementDefinitions] ([SettingsVersionId], [Code]);
@@ -642,7 +652,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_ActionReceipts_GameId] ON [ActionReceipts] ([GameId]);
@@ -650,7 +660,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_ActionReceipts_UserId_RequestId] ON [ActionReceipts] ([UserId], [RequestId]);
@@ -658,7 +668,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_AdminAudit_ActorId] ON [AdminAudit] ([ActorId]);
@@ -666,7 +676,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_AdminAudit_OccurredAt] ON [AdminAudit] ([OccurredAt]);
@@ -674,7 +684,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_Arrests_GameId_TargetId] ON [Arrests] ([GameId], [TargetId]);
@@ -682,7 +692,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
@@ -690,7 +700,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     EXEC(N'CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL');
@@ -698,7 +708,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
@@ -706,7 +716,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
@@ -714,7 +724,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
@@ -722,7 +732,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
@@ -730,7 +740,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     EXEC(N'CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL');
@@ -738,7 +748,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_CaseTemplates_CaseKey] ON [CaseTemplates] ([CaseKey]);
@@ -746,7 +756,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_CaseVariants_CaseVersionId_PlayerCount_Language] ON [CaseVariants] ([CaseVersionId], [PlayerCount], [Language]);
@@ -754,7 +764,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_CaseVersions_ReviewedBy] ON [CaseVersions] ([ReviewedBy]);
@@ -762,7 +772,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     EXEC(N'CREATE UNIQUE INDEX [IX_CaseVersions_TemplateId] ON [CaseVersions] ([TemplateId]) WHERE [ReviewStatus] = ''Published''');
@@ -770,7 +780,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_CaseVersions_TemplateId_VersionNo] ON [CaseVersions] ([TemplateId], [VersionNo]);
@@ -778,7 +788,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_ClueRecipients_GameId_UserId] ON [ClueRecipients] ([GameId], [UserId]);
@@ -786,7 +796,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_GameCases_CaseVariantId] ON [GameCases] ([CaseVariantId]);
@@ -794,7 +804,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_GameClues_GameId_ClueKey] ON [GameClues] ([GameId], [ClueKey]);
@@ -802,7 +812,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     EXEC(N'CREATE UNIQUE INDEX [IX_GamePlayers_GameId_CharacterKey] ON [GamePlayers] ([GameId], [CharacterKey]) WHERE [CharacterKey] IS NOT NULL');
@@ -810,7 +820,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_GamePlayers_UserId] ON [GamePlayers] ([UserId]);
@@ -818,7 +828,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     EXEC(N'CREATE UNIQUE INDEX [IX_Games_RoomId] ON [Games] ([RoomId]) WHERE [IsRunning] = 1');
@@ -826,7 +836,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_Games_RoomId_Number] ON [Games] ([RoomId], [Number]);
@@ -834,7 +844,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_Games_SettingsVersionId] ON [Games] ([SettingsVersionId]);
@@ -842,7 +852,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_Games_Status_PhaseEndsAt] ON [Games] ([Status], [PhaseEndsAt]);
@@ -850,7 +860,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_GenerationJobs_GameId] ON [GenerationJobs] ([GameId]);
@@ -858,7 +868,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_GenerationJobs_RequestId] ON [GenerationJobs] ([RequestId]);
@@ -866,7 +876,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_GenerationJobs_Status_LeaseUntil] ON [GenerationJobs] ([Status], [LeaseUntil]);
@@ -874,7 +884,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_OutboxMessages_DispatchedAt_CreatedAt] ON [OutboxMessages] ([DispatchedAt], [CreatedAt]);
@@ -882,7 +892,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_OutboxMessages_GameId_UserId] ON [OutboxMessages] ([GameId], [UserId]);
@@ -890,7 +900,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_OutboxMessages_RoomId] ON [OutboxMessages] ([RoomId]);
@@ -898,7 +908,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_PendingScoreEvents_GameId_UserId_EventKey] ON [PendingScoreEvents] ([GameId], [UserId], [EventKey]);
@@ -906,7 +916,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_PlayerAchievements_DefinitionId] ON [PlayerAchievements] ([DefinitionId]);
@@ -914,7 +924,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_PlayerAchievements_GameId_UserId] ON [PlayerAchievements] ([GameId], [UserId]);
@@ -922,7 +932,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_PlayerConnections_GameId_UserId] ON [PlayerConnections] ([GameId], [UserId]);
@@ -930,7 +940,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_Questions_GameId_DetectiveId] ON [Questions] ([GameId], [DetectiveId]);
@@ -938,7 +948,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_Questions_GameId_Round_DetectiveId_Slot] ON [Questions] ([GameId], [Round], [DetectiveId], [Slot]);
@@ -946,7 +956,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_Questions_GameId_TargetId] ON [Questions] ([GameId], [TargetId]);
@@ -954,7 +964,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_RankDefinitions_SettingsVersionId_Code] ON [RankDefinitions] ([SettingsVersionId], [Code]);
@@ -962,7 +972,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_RankDefinitions_SettingsVersionId_MinPoints] ON [RankDefinitions] ([SettingsVersionId], [MinPoints]);
@@ -970,7 +980,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_RoomMembers_RoomId_UserId] ON [RoomMembers] ([RoomId], [UserId]);
@@ -978,7 +988,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     EXEC(N'CREATE UNIQUE INDEX [IX_RoomMembers_UserId] ON [RoomMembers] ([UserId]) WHERE [LeftAt] IS NULL');
@@ -986,7 +996,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_Rooms_Code] ON [Rooms] ([Code]);
@@ -994,7 +1004,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_Rooms_HostUserId] ON [Rooms] ([HostUserId]);
@@ -1002,7 +1012,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_ScoreEntries_CompletedAt_UserId] ON [ScoreEntries] ([CompletedAt], [UserId]) INCLUDE ([Delta]);
@@ -1010,7 +1020,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_ScoreEntries_GameId_UserId_EventKey] ON [ScoreEntries] ([GameId], [UserId], [EventKey]);
@@ -1018,7 +1028,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_SettingsVersions_ChangedBy] ON [SettingsVersions] ([ChangedBy]);
@@ -1026,7 +1036,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_SettingsVersions_VersionNo] ON [SettingsVersions] ([VersionNo]);
@@ -1034,7 +1044,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE INDEX [IX_Statements_GameId_AuthorId] ON [Statements] ([GameId], [AuthorId]);
@@ -1042,7 +1052,7 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     CREATE UNIQUE INDEX [IX_Statements_GameId_Round_AuthorId] ON [Statements] ([GameId], [Round], [AuthorId]);
@@ -1050,11 +1060,11 @@ END;
 
 IF NOT EXISTS (
     SELECT * FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20261109084342_InitialCreate'
+    WHERE [MigrationId] = N'20261109084738_InitialCreate'
 )
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20261109084342_InitialCreate', N'10.0.12');
+    VALUES (N'20261109084738_InitialCreate', N'10.0.12');
 END;
 
 COMMIT;
