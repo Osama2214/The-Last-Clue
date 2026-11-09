@@ -1,3 +1,4 @@
+using LastClue.Infrastructure;
 using LastClue.Infrastructure.Persistence;
 using LastClue.Web.Diagnostics;
 using LastClue.Web.Api;
@@ -12,6 +13,7 @@ builder.Logging.AddSafeRequestLogging();
 builder.Services.AddProjectConfiguration();
 builder.Services.AddDbContext<AppDbContext>((services, options) =>
     options.UseSqlServer(services.GetRequiredService<IOptions<DatabaseOptions>>().Value.Default));
+builder.Services.AddInfrastructure();
 builder.Services.AddControllersWithViews();
 builder.Services.AddApiFoundation();
 builder.Services.AddHealthChecks()

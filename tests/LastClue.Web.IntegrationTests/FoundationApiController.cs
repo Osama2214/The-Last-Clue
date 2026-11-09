@@ -66,6 +66,8 @@ public sealed class FoundationApiController : ApiControllerBase
         "phase" => new ConflictException(DomainErrorCode.PhaseChanged, 42, detail),
         "room-full" => new ConflictException(DomainErrorCode.RoomFull, detail: detail),
         "already-in-room" => new ConflictException(DomainErrorCode.AlreadyInRoom, detail: detail),
+        "concurrency" => new ConcurrencyConflictException(),
+        "duplicate" => new DuplicateException(),
         "replay" => new ConflictException(DomainErrorCode.ReplayMismatch, detail: detail),
         "rate-limit" => new RateLimitedException(30, detail),
         _ => new InvalidOperationException(detail)
