@@ -48,6 +48,18 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options)
             user.Property(x => x.DisplayName).HasMaxLength(80);
             user.Property(x => x.AvatarSeed).HasMaxLength(80);
         });
+        // Limit Identity provider and role keys so their composite indexes fit SQL Server.
+        builder.Entity<IdentityRole>().Property(x => x.Id).HasMaxLength(128);
+        builder.Entity<IdentityUserLogin<string>>(login =>
+        {
+            login.Property(x => x.LoginProvider).HasMaxLength(128);
+            login.Property(x => x.ProviderKey).HasMaxLength(128);
+        });
+        builder.Entity<IdentityUserToken<string>>(token =>
+        {
+            token.Property(x => x.LoginProvider).HasMaxLength(128);
+            token.Property(x => x.Name).HasMaxLength(128);
+        });
         builder.Entity<IdentityUserRole<string>>().HasKey(x => new { x.UserId, x.RoleId }).IsClustered(false);
         builder.Entity<IdentityUserToken<string>>().HasKey(x => new { x.UserId, x.LoginProvider, x.Name }).IsClustered(false);
 
