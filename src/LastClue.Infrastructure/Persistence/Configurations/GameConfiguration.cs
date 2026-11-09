@@ -25,14 +25,8 @@ internal sealed class GameConfiguration : IEntityTypeConfiguration<Game>
 
         builder.HasIndex(x => new { x.RoomId, x.Number }).IsUnique();
         builder.HasIndex(x => x.RoomId).IsUnique().HasFilter("[IsRunning] = 1");
+        builder.HasIndex(x => new { x.Status, x.PhaseEndsAt });
         builder.HasOne<Room>().WithMany(room => room.Games).HasForeignKey(x => x.RoomId);
         builder.HasOne<SettingsVersion>().WithMany().HasForeignKey(x => x.SettingsVersionId);
-
-        // Each collection is enabled with its own table mapping.
-        builder.Ignore(x => x.Statements);
-        builder.Ignore(x => x.Questions);
-        builder.Ignore(x => x.Votes);
-        builder.Ignore(x => x.Arrests);
-        builder.Ignore(x => x.Clues);
     }
 }
