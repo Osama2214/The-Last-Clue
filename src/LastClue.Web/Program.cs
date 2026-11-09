@@ -1,12 +1,17 @@
+using LastClue.Infrastructure.Persistence;
 using LastClue.Web.Diagnostics;
 using LastClue.Web.Api;
 using LastClue.Web.Configuration;
 using LastClue.Web.Health;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.AddSafeRequestLogging();
 builder.Services.AddProjectConfiguration();
+builder.Services.AddDbContext<AppDbContext>((services, options) =>
+    options.UseSqlServer(services.GetRequiredService<IOptions<DatabaseOptions>>().Value.Default));
 builder.Services.AddControllersWithViews();
 builder.Services.AddApiFoundation();
 builder.Services.AddHealthChecks()
