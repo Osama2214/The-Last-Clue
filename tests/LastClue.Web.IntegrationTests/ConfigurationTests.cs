@@ -13,7 +13,7 @@ namespace LastClue.Web.IntegrationTests;
 
 public sealed class ConfigurationTests
 {
-    private const string ValidConnection = "Server=database.test;Database=LastClue;Integrated Security=true";
+    private const string ValidConnection = "Server=tcp:127.0.0.1,1;Database=LastClue;Integrated Security=true;Connect Timeout=1;ConnectRetryCount=0";
 
     [Theory]
     [InlineData(null)]
@@ -56,7 +56,7 @@ public sealed class ConfigurationTests
         Assert.Equal(canAttempt, options.CanAttemptGeneration);
         Assert.Equal(reason, options.FallbackReason);
         Assert.Equal(HealthStatus.Healthy, (await ConfigurationReport(factory)).Status);
-        // Valid configuration does not prove database connectivity or playable case coverage.
+        // Valid configuration alone does not prove database connectivity.
         using var ready = await client.GetAsync("/health/ready");
         Assert.Equal(HttpStatusCode.ServiceUnavailable, ready.StatusCode);
     }
@@ -116,6 +116,30 @@ public sealed class ConfigurationTests
     {
         using var factory = CreateFactory(new() { ["Logging:LogLevel:Default"] = "UnsupportedLevel" });
         Assert.ThrowsAny<Exception>(() => factory.CreateClient());
+    }
+
+    [SqlServerFact]
+    public async Task Readiness_is_healthy_when_sql_server_is_reachable_even_without_ai_credentials()
+    {
+        using var factory = CreateFactory(new()
+        {
+            ["ConnectionStrings:Default"] = Environment.GetEnvironmentVariable("LAST_CLUE_TEST_SQLSERVER"),
+            ["AiProvider:Enabled"] = "true",
+            ["AiProvider:ApiKey"] = null
+        });
+        using var client = factory.CreateClient();
+        using var response = await client.GetAsync("/health/ready");
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        Assert.Equal("{\"status\":\"Healthy\"}", await response.Content.ReadAsStringAsync());
+    }
+
+    private sealed class SqlServerFactAttribute : FactAttribute
+    {
+        public SqlServerFactAttribute()
+        {
+            if (string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("LAST_CLUE_TEST_SQLSERVER")))
+                Skip = "Set LAST_CLUE_TEST_SQLSERVER to run against SQL Server.";
+        }
     }
 
     private static WebApplicationFactory<Program> CreateFactory(
