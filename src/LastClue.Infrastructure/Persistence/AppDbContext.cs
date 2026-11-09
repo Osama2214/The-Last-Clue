@@ -21,6 +21,12 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options)
     public DbSet<GameClue> GameClues => Set<GameClue>();
     public DbSet<ClueRecipient> ClueRecipients => Set<ClueRecipient>();
     public DbSet<GenerationJob> GenerationJobs => Set<GenerationJob>();
+    public DbSet<Statement> Statements => Set<Statement>();
+    public DbSet<Question> Questions => Set<Question>();
+    public DbSet<AccusationVote> AccusationVotes => Set<AccusationVote>();
+    public DbSet<Arrest> Arrests => Set<Arrest>();
+    public DbSet<PendingScoreEvent> PendingScoreEvents => Set<PendingScoreEvent>();
+    public DbSet<ScoreEntry> ScoreEntrys => Set<ScoreEntry>();
 
     protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
     {
