@@ -39,7 +39,7 @@ Then open `http://localhost:8081`.
 
 The Dockerfile restores locked dependencies and publishes the web project with the pinned SDK. The final image contains the ASP.NET runtime and published output, and runs as the image's non-root application user. Build outputs, documentation, tests and local secret files are excluded from the build context.
 
-Compose stores ASP.NET data-protection keys in a named volume so container replacement does not discard them. This is independent of game data. The current application has no database integration; the SQL Server service and connection configuration will be added with the persistence implementation.
+Compose stores ASP.NET data-protection keys in a named volume so container replacement does not discard them. This is independent of game data. The default Compose service starts the web app by itself. Supply a connection to a migrated SQL Server with the Identity roles configured before testing account or lobby actions. The database and administrator setup steps are in [ops.md](ops.md).
 
 The Compose environment is Development and uses local HTTP. For hosting, configure HTTPS and the production environment through the hosting platform. This local setup does not replace the deployment plan.
 

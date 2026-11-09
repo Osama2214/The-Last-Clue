@@ -28,3 +28,13 @@ dotnet tool restore
 dotnet build src/LastClue.Web --configuration Release
 dotnet ef migrations script 0 InitialCreate --idempotent --project src/LastClue.Infrastructure --startup-project src/LastClue.Web --configuration Release --no-build --output db/release-001.sql
 ```
+
+## Bootstrap the administrator
+
+Apply the database migration before running the bootstrap command. Configure `Admin:Email` and `Admin:Password` using local user secrets or the hosting environment. Use `Admin__Email` and `Admin__Password` as environment variable names. Run the command once against the target database.
+
+```powershell
+dotnet run --project src/LastClue.Web --no-launch-profile -- --seed-identity
+```
+
+The command creates the Player and Admin roles and the first administrator account. Repeating it for the same administrator leaves the account in place. Remove the bootstrap secrets afterward. Application cookies use an eight-hour sliding window. The Compose deployment persists data-protection keys in a named volume. Configure a persistent, restricted key store when deploying to Azure.

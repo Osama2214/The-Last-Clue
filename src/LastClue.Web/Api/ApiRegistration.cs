@@ -1,5 +1,4 @@
 using LastClue.Web.Diagnostics;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LastClue.Web.Api;
@@ -15,11 +14,24 @@ internal static class ApiRegistration
             options.InvalidModelStateResponseFactory = action =>
             {
                 action.HttpContext.Response.Headers.CacheControl = "no-store";
-                return new JsonResult(ApiErrors.ForStatus(action.HttpContext, 400)) { StatusCode = 400 };
+                var error = ApiErrors.ForStatus(action.HttpContext, 400);
+                if (action.HttpContext.Request.Path.Equals("/api/v1/auth/register", StringComparison.OrdinalIgnoreCase))
+                {
+                    var fields = new Dictionary<string, string>();
+                    foreach (var name in new[] { "email", "displayName", "password" })
+                    {
+                        if (action.ModelState.Any(field => field.Value?.Errors.Count > 0 &&
+                            field.Key.Equals(name, StringComparison.OrdinalIgnoreCase)))
+                            fields[name] = "Check this field.";
+                    }
+
+                    if (fields.Count > 0)
+                        error = error with { Fields = fields };
+                }
+
+                return new JsonResult(error) { StatusCode = 400 };
             };
         });
-        // Identity will register the cookie handler when accounts are implemented.
-        services.AddAuthentication(IdentityConstants.ApplicationScheme);
         services.ConfigureApplicationCookie(options =>
         {
             var login = options.Events.OnRedirectToLogin;

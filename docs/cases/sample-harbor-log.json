@@ -1,0 +1,30 @@
+{
+  "language": "en",
+  "playerCount": 4,
+  "briefing": "The original harbor log disappeared from its display case minutes before the museum opened. The case was found locked. Three staff members were on site during the last confirmed sighting.",
+  "characters": [
+    { "key": "curator", "name": "Nadia", "roleDescription": "The curator who prepared the display." },
+    { "key": "technician", "name": "Karim", "roleDescription": "The technician assigned to repair the west entrance." },
+    { "key": "archivist", "name": "Lina", "roleDescription": "The archivist who cataloged the harbor log." }
+  ],
+  "criminalKey": "archivist",
+  "scripts": {
+    "curator": "You locked the case at 08:35. You left your key in a sealed envelope at reception. You answered a visitor call there between 08:39 and 08:48.",
+    "technician": "You signed into the west entrance at 08:38. You handed the supervisor your repaired access reader at 08:46. While delivering tools earlier, you noticed the loose hinge pin on the display case.",
+    "archivist": "You removed the hinge pin at 08:42, took the log and reinserted the pin. You wanted time to correct a catalog entry before the opening. You hid the log inside a hollow display stand and returned the archive trolley at 08:44."
+  },
+  "timeline": [
+    { "time": "08:35", "event": "Nadia locks the display case and deposits her key at reception." },
+    { "time": "08:39", "event": "Nadia answers a call at reception. Karim is repairing the west entrance." },
+    { "time": "08:42", "event": "Lina opens the case from the hinge side and removes the harbor log." },
+    { "time": "08:44", "event": "The archive trolley is returned after passing through the gallery." },
+    { "time": "08:50", "event": "Opening staff report that the case is locked and the log is missing." }
+  ],
+  "solution": "Lina used the loose hinge pin to lift the lid without unlocking the case. The pin's fresh marks and the unbroken key seal show how the case was opened. The trolley record and gallery camera place Lina at the display at 08:42, while the reception and maintenance records account for the other two suspects.",
+  "clues": [
+    { "key": "sealed-key", "round": 1, "audience": "Public", "body": "The lock is intact and the curator's key remains in its sealed reception envelope." },
+    { "key": "hinge-mark", "round": 2, "audience": "Detectives", "body": "A fresh scrape crosses the top of the loose hinge pin. With the pin removed, the lid can be lifted from that side." },
+    { "key": "old-repair", "round": 2, "audience": "Character", "characterKey": "technician", "body": "Your repair sheet shows that you reported the loose pin before going to the west entrance." },
+    { "key": "trolley-record", "round": 3, "audience": "Public", "body": "The gallery camera shows the archive trolley beside the case at 08:42. The checkout record shows Lina had it then. Reception and maintenance records place Nadia and Karim elsewhere." }
+  ]
+}

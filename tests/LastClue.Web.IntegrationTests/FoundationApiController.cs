@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace LastClue.Web.IntegrationTests;
 
 // Registered only by ApiTestFactory; no test routes are published with the application.
+[Microsoft.AspNetCore.Mvc.IgnoreAntiforgeryToken]
 public sealed class FoundationApiController : ApiControllerBase
 {
     [HttpGet("errors/{kind}")]

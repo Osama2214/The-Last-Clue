@@ -1,7 +1,35 @@
+@model AvatarViewModel
 @{ ViewData["Title"] = "Home"; }
 <section class="game-introduction">
     <h1>The Last Clue</h1>
     <p>An online investigation game for 4–8 players.</p>
     <p>Investigate a fictional case through statements, questions and clues over three rounds.</p>
-    <p class="text-secondary">The game is being prepared. Sign-in and room creation will be available here.</p>
+
+    @if (Model is not null)
+    {
+        <div id="profile" class="d-flex align-items-center gap-2 mb-4">
+            <partial name="_Avatar" model="Model" />
+            <span>@Model.DisplayName</span>
+        </div>
+    }
+
+    @if (User.IsInRole("Player"))
+    {
+        <div class="d-flex flex-wrap align-items-end gap-3" aria-describedby="lobby-note">
+            <button class="btn btn-primary" type="button" disabled>Create Room</button>
+            <form class="d-flex align-items-end gap-2">
+                <div>
+                    <label for="room-code" class="form-label">Room code</label>
+                    <input id="room-code" maxlength="12" class="form-control" disabled />
+                </div>
+                <button class="btn btn-outline-primary" type="button" disabled>Join</button>
+            </form>
+        </div>
+        <p id="lobby-note" class="text-secondary mt-2">Room controls will be available when the lobby page is ready.</p>
+    }
+    else if (Model is null)
+    {
+        <a asp-controller="Account" asp-action="Login" class="btn btn-primary">Sign in</a>
+        <a asp-controller="Account" asp-action="Register" class="btn btn-outline-primary">Create an account</a>
+    }
 </section>

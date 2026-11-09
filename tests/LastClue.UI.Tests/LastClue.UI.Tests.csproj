@@ -7,5 +7,9 @@
     <PackageReference Include="coverlet.collector" PrivateAssets="all" />
     <Using Include="Xunit" />
     <PackageReference Include="Microsoft.Playwright" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/LastClue.Web/LastClue.Web.csproj" />
   </ItemGroup>
 </Project>

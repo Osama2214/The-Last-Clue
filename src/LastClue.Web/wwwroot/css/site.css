@@ -1,5 +1,14 @@
+:root { --navy: #17354B; --primary: #25435E; --error: #A32626; }
 html { font-size: 16px; }
-body { color: #17354b; background: #fff; }
-a { color: #25435e; }
-a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #25435e; outline-offset: 3px; }
+body { color: var(--navy); background: #fff; }
+a { color: var(--primary); }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+.btn-primary { --bs-btn-bg: var(--primary); --bs-btn-border-color: var(--primary); }
+.btn-outline-primary { --bs-btn-color: var(--primary); --bs-btn-border-color: var(--primary); }
 .game-introduction { max-width: 48rem; padding-block: 2rem; }
+.account-panel { max-width: 32rem; margin-inline: auto; padding-block: 1rem; }
+.field-error { color: var(--error); }
+.avatar { display: inline-grid; place-items: center; inline-size: 2.5rem; block-size: 2.5rem; }
+.avatar img, .avatar-initials { grid-area: 1 / 1; border-radius: 50%; }
+.avatar-initials { display: grid; place-items: center; inline-size: 100%; block-size: 100%; background: var(--navy); color: #fff; }
+.avatar [hidden] { display: none; }
