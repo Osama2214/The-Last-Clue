@@ -13,7 +13,6 @@ Cohort: **GIZ5_SWD5_S4** · Digital Egypt Pioneers Initiative · Full Stack .NET
 | Member | GitHub |
 | --- | --- |
 | Mennatullah Mahmoud Fathy Abdullah | [mennatullahmahmoud06-del](https://github.com/mennatullahmahmoud06-del) |
-| Mostafa Mohamed Kamel Abdrabouh | [MostafaKamel25](https://github.com/MostafaKamel25) |
 | Osama Ahmed Abdelaziz | [Osama2214](https://github.com/Osama2214) |
 | Adham Mohamed Ahmed Sayed | [2-dhamm](https://github.com/2-dhamm) |
 
